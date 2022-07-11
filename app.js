@@ -19,9 +19,9 @@ function alphanumeric(str) {
   
     for (i = 0, len = str.length; i < len; i++) {
       code = str.charCodeAt(i);
-      if (!(code > 47 && code < 58) && // numeric (0-9)
-          !(code > 64 && code < 91) && // upper alpha (A-Z)
-          !(code > 96 && code < 123)) { // lower alpha (a-z)
+      if (!(code > 47 && code < 58) &&
+          !(code > 64 && code < 91) &&
+          !(code > 96 && code < 123)) {
         return false;
       }
     }
@@ -70,11 +70,11 @@ app.post("/challenge", function (req, res) {
         return res.status(200).json({
             is_success: true,
             user_id: "vgauravkumar",
-            count: count,//TODO
-            email: "19056530@kiit.ac.in",
+            count: count,
+            email: "1905530@kiit.ac.in",
             roll_number: "1905530",
-            numbers: numbers, //["1","2","3"],
-            alphabets: alphabets, //["A", "B"]
+            numbers: numbers,
+            alphabets: alphabets,
         });
     } catch (err) {
         console.log(err)
